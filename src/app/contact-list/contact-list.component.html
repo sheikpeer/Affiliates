@@ -1,0 +1,58 @@
+
+<!-- Editable table -->
+<div class="card">
+  <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Editable table</h3>
+  <div class="card-body">
+    <div id="table" class="table-editable">
+      <!-- <span class="table-add float-right mb-3 mr-2">
+        <a class="text-success" (click)="add()">
+          <mdb-icon fas icon="plus" size="2x"></mdb-icon>
+        </a>
+      </span> -->
+      <table class="table table-bordered table-responsive-md table-striped text-center"  style="margin-top:'150px'">
+        <thead>
+   
+          <tr > 
+   
+            <!-- <div>
+              <span class="table-add float-right mb-3 mr-2">
+                <a class="text-success" (click)="add()">
+                  <mdb-icon fas icon="plus" size="2x"></mdb-icon>
+                </a>
+              </span>
+            </div> -->
+          
+         
+          </tr>
+       
+        </thead>
+        <tbody>
+          
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Msg</th>
+          <th scope="col">action</th>
+          <button mat-raised-button class="fa fa-plus text-primary fa-2x" routerLink="/contact"  ></button>
+          
+          <tr *ngFor="let array of contactlist;let i=index">
+  
+  
+            <td  class="text-center">{{ array.id}}</td>
+            <td  class="text-center"> {{ array.name }}</td>
+            <td  class="text-center">{{array.email }}</td>
+            <td  class="text-center" >{{ array.msg}}</td>
+            <td  class="text-center" > <button mat-raised-button class="fa fa-edit fa-2x text-warning"   [routerLink]="['/contact',array.id]"    ></button>
+              <button mat-raised-button class="fa fa-trash-o fa-2x text-danger" (click)="delete(array)" ></button>
+            </td>
+          </tr>
+    
+        </tbody>
+       
+      </table>
+
+
+    </div>
+  </div>
+</div>
+

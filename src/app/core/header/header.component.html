@@ -1,0 +1,46 @@
+<header class="navbar navbar-toggleable-md navbar-light bg-white fixed-top mediumnavigation">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarsWow" aria-controls="navbarsWow" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="container">
+        <!-- Begin Logo -->
+        <a class="navbar-brand" routerLink="/home">
+            <img src="assets/images/logo.png" alt="Affiliates - Free Bootstrap Template">
+        </a>
+        <!-- End Logo -->
+        <!-- Begin Menu -->
+        <div class="collapse navbar-collapse" id="navbarsWow">
+            <!-- Begin Menu -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/home">Home</a>
+                </li>
+                
+     
+                <li class="dropdown">
+                    <button class="dropbtn">post</button>
+                    <div class="dropdown-content">
+                        <a class="dropdown-item" routerLink="/post/single">Left Sidebar</a>
+                        <a class="dropdown-item"  routerLink="/post/right-sidebar">Right Sidebar</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/category">Category</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a  class="nav-link highlight"
+                        routerLink="/contact-list">Contact List</a>
+                </li>
+            </ul>
+            <!-- End Menu -->
+        </div>
+    </div>
+</header>

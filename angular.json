@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "3df268ef-3cd6-480f-b625-e1438f1d8b39"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -27,9 +30,17 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/theme.css",
+              "node_modules/ngx-toastr/toastr.css" 
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/theme.js",
+              "src/assets/js/masonry.pkgd.min.js",
+              "src/assets/js/ie10-viewport-bug-workaround.js",
+              "src/assets/js/jquery.min.js"
+
+            ]
           },
           "configurations": {
             "production": {

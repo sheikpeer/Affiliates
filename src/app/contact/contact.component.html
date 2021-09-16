@@ -1,0 +1,60 @@
+<div class="site-content">
+	<div class="container">
+		<!-- Content (replace with your e-mail address below)
+    ================================================== -->
+		<div class="main-content">
+			<section>
+				<div class="section-title">
+					<h2><span>Contact</span></h2>
+				</div>
+				<div class="article-post">
+					<form  [formGroup]="form" method="post" (ngSubmit)="onSubmit()" >
+						<div class="form-group row">
+							<div class="form-group col-md-6" [ngClass]="{
+								'has-danger': name.invalid && (name.dirty || name.touched),
+								 'has-success': name.valid && (name.dirty || name.touched)}">
+								<input class="form-control"  type="text" name="name" placeholder="name" ngModel name="name"
+									formControlName="name" required>
+								<div class="form-control-feedback" *ngIf="name.errors && (name.dirty || name.touched)">
+									<p *ngIf="name.errors.required">Name is required</p>
+								</div>
+
+							</div>
+
+							<div class="form-group col-md-6" [ngClass]="{  'has-danger': email.invalid && (email.dirty || email.touched),
+                             'has-success': email.valid && (email.dirty || email.touched)}">
+
+								<input type="email" name="email" placeholder="Email" class="form-control"
+									formControlName="email" required>
+								<div class="form-control-feedback"
+									*ngIf="email.errors && (email.dirty || email.touched)">
+									<p *ngIf="email.errors.required">Email is required</p>
+									<!-- <p *ngIf="password.errors.pattern">The email address must contain at least the @
+										character</p> -->
+								</div>
+
+					
+
+							</div>
+							<!-- <div class="col-md-6">
+							<input class="form-control" type="email" name="_replyto" placeholder="E-mail Address">
+						</div> -->
+						</div>
+						<textarea rows="8" class="form-control mb-2"  name="msg" placeholder="Message" formControlName="msg" required>
+							<div class="form-control-feedback"
+							*ngIf="msg.errors && (msg.dirty || msg.touched)">
+							<p *ngIf="msg.errors.required"> enter some text</p>
+							<!-- <p *ngIf="password.errors.pattern">The email address must contain at least the @
+								character</p> -->
+						</div>
+						</textarea>
+						<input class="btn btn-success" type="submit" value="Send"  >
+					</form>
+				</div>
+				<!-- routerLink="/contact-list" -->
+			</section>
+		</div>
+	</div>
+
+
+</div>
